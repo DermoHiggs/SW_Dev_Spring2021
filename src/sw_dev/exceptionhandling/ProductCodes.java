@@ -42,7 +42,7 @@ public class ProductCodes
 
       while (!code.equalsIgnoreCase("XXX"))
       {
-         try
+         //try
          {
             zone = code.charAt(9);
             district = Integer.parseInt(code.substring(3, 7));
@@ -51,11 +51,11 @@ public class ProductCodes
                banned++;
          }
          
-         catch (StringIndexOutOfBoundsException exception)
+         //catch (StringIndexOutOfBoundsException exception)
          {
-            System.out.println("Improper code length: " + code );
+            System.out.println("Improper code length: " + code);//  + " " + exception.toString());
          }
-         catch (NumberFormatException exception)
+         //catch (NumberFormatException exception)
          {
             System.out.println("District is not numeric: " + code );
          }

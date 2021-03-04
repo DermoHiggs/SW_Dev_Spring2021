@@ -14,7 +14,7 @@ public class MainClass {
 
     public static void main(String[] args) {
         LOGGER.setLevel(Level.INFO);
-
+        //Math.sqrt(5);
         try {
             makeDatabaseConnection();
         } catch (HandledException e) {

@@ -5,8 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 class CheckedExceptionExample1Fixed2 {
-    public static void main(String args[])
-    {
+    public static void main(String args[])  {
         FileInputStream fis = null;
         try{
             fis = new FileInputStream("B:/myfile.txt");
@@ -17,7 +16,7 @@ class CheckedExceptionExample1Fixed2 {
             {
                 System.out.print((char)k);
             }
-            fis.close();
+
         }
         catch(FileNotFoundException fnfe){
             System.out.println("The specified file is not " +
@@ -25,6 +24,15 @@ class CheckedExceptionExample1Fixed2 {
         }
         catch(IOException ioe){
             System.out.println("I/O error occurred: "+ioe);
+        }
+        finally {
+            if(fis != null) {
+                try {
+                    fis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
