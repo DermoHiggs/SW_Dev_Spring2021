@@ -30,8 +30,8 @@ public class BigOSortTester {
             //the test sizes might have to be changed to convey useful data (refer to the document on
             //the VLE for illustrative test sizes in each case
 
-            //sortObject.mergeSort(listToTest);  //This is an O(N*Log(N)) algorithm
-            sortObject.linearDummyAlgorithm(listToTest); //This is an O(N) algorithm
+            sortObject.mergeSort(listToTest);  //This is an O(N*Log(N)) algorithm
+            //sortObject.linearDummyAlgorithm(listToTest); //This is an O(N) algorithm
             //sortObject.bubbleSort(listToTest); //This is an O(N^2) algorithm
 
             //Integer searchKey = currTestSize*5;
